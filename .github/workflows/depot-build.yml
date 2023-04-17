@@ -22,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Checkout repo
+        uses: actions/checkout@v3
+      -
         name: Set up Depot CLI
         uses: depot/setup-action@v1
       -
@@ -43,8 +46,9 @@ jobs:
           # what tags to apply to the generated image:
           # the images will be pushed to: https://hub.docker.com/repository/docker/drmrbrewer/astro-api/general
           tags: drmrbrewer/astro-api,drmrbrewer/astro-api:v20
-          # where in the repo to run the build from (commented out for now as it doesn't work with it... but should, as acknowledged by Depot support:
-          # context: .
+          # base folder for the build (equivalent to PATH in docker buildx build)...
+          # commented out for now as the docker image seems to be much smaller without it...
+          #   context: .
           # this is a multi-platform build... specify required platforms here:
           platforms: linux/amd64,linux/arm64
           # which (of several) Dockerfiles to use for the build:
