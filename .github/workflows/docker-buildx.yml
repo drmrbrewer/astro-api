@@ -14,8 +14,11 @@ on:
       - main
       - master
     # reduce the number of builds by limiting automatic builds being triggered only with a push to *this* yml file:
+    # can trigger a build manually too via: https://github.com/drmrbrewer/astro-api/actions/workflows/docker-buildx.yml
     paths:
       - '.github/workflows/docker-buildx.yml'
+      # - 'Dockerfile-captain'
+      # - 'captain-apache2.conf'
 
 jobs:
   docker:
