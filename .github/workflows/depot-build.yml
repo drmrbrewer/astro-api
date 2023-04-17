@@ -1,6 +1,11 @@
 # based on: https://depot.dev/docs/integrations/github-actions#build-multi-platform-images-natively-without-emulation
 # see docs at: https://github.com/depot/build-push-action
 
+# note: could also use a more direct approach based on the depot CLI, which is more like that used for the depot-bitbucket integration
+# and also more similar to the native `docker buildx build` CLI (in fact they've deliberately set it up to accept the same CLI options):
+# CLI approach for Bitbucket (docker build): https://depot.dev/docs/integrations/bitbucket-pipelines#basic-build-and-push-to-dockerhub
+# CLI approach for GitHub (generic): https://depot.dev/docs/integrations/github-actions#option-3--depot-cli
+
 name: depot-build
 
 on:
@@ -13,7 +18,7 @@ on:
       - master
 
 jobs:
-  docker-image:
+  docker:
     runs-on: ubuntu-latest
     steps:
       -
