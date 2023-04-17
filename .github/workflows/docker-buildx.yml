@@ -9,9 +9,13 @@ on:
   # https://stackoverflow.com/a/67523883/4070848
   workflow_dispatch: {}
   push:
+    # have included both main and master only to prevent an issue if using this yml in a repo where the other branch name is used...
     branches:
       - main
       - master
+    # reduce the number of builds being triggered by limiting automatic builds being triggered only with a push to *this* yml file:
+    paths:
+      - '.github/workflows/docker-buildx.yml'
 
 jobs:
   docker:
