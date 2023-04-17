@@ -13,7 +13,7 @@ on:
     branches:
       - main
       - master
-    # reduce the number of builds by limiting automatic builds being triggered only with a push to *this* yml file:
+    # reduce the number of builds by limiting automatic builds being triggered only with a push to *this* yml file (e.g. to change the docker tag version number):
     # can trigger a build manually too via: https://github.com/drmrbrewer/astro-api/actions/workflows/docker-buildx.yml
     paths:
       - '.github/workflows/docker-buildx.yml'
