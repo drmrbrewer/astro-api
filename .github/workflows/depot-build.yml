@@ -39,7 +39,7 @@ jobs:
           # the images will be pushed to: https://hub.docker.com/repository/docker/drmrbrewer/astro-api/general
           tags: drmrbrewer/astro-api,drmrbrewer/astro-api:v20
           # where in the repo to run the build from:
-          context: .
+          # context: .
           # this is a multi-platform build... specify required platforms here:
           platforms: linux/amd64,linux/arm64
           # which (of several) Dockerfiles to use for the build:
