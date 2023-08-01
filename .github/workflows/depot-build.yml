@@ -53,8 +53,7 @@ jobs:
           # commented out for now as the docker image seems to be much smaller without it...
           #   context: .
           # this is a multi-platform build... specify required platforms here:
-          platforms: linux/amd64
-          # ,linux/arm64
+          platforms: linux/amd64,linux/arm64
           # which (of several) Dockerfiles to use for the build:
           file: "Dockerfile-captain"
           # push to the Docker Hub (login credentials set above):
