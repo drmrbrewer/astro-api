@@ -48,7 +48,7 @@ jobs:
           token: ${{ secrets.DEPOT_PROJECT_TOKEN }}
           # what tags to apply to the generated image:
           # the images will be pushed to: https://hub.docker.com/repository/docker/drmrbrewer/astro-api/general
-          tags: drmrbrewer/astro-api,drmrbrewer/astro-api:v23
+          tags: drmrbrewer/astro-api,drmrbrewer/astro-api:v24
           # base folder for the build (equivalent to PATH in docker buildx build)...
           # commented out for now as the docker image seems to be much smaller without it...
           #   context: .
